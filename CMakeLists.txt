@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 
-project(BoostStateMachine VERSION "1.0.0")
+project(BoostStateMachine)
 
 # ##############################################################################
 # policys
@@ -13,9 +13,5 @@ endif()
 # find packages
 find_package(Boost 1.60 REQUIRED)
 
-# exe
-add_executable(${PROJECT_NAME} main.cpp)
-target_link_libraries(${PROJECT_NAME} PUBLIC Boost::boost)
-
-# install information
-install(TARGETS ${PROJECT_NAME} DESTINATION bin)
+# add directories
+add_subdirectory(src)

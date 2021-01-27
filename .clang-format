@@ -1,0 +1,54 @@
+---
+BasedOnStyle: Google
+NamespaceIndentation: None
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+AlignConsecutiveMacros: true
+AlignEscapedNewlines: Right
+AlignTrailingComments: true
+AlignOperands: true
+BreakBeforeBinaryOperators: All
+ColumnLimit: 0
+AccessModifierOffset: -4
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+BinPackArguments: false
+BinPackParameters: false
+BreakConstructorInitializersBeforeComma: true
+BreakInheritanceList: BeforeComma
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
+SpaceBeforeRangeBasedForLoopColon: false
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyParentheses: false
+SpacesInSquareBrackets: false
+SpacesInConditionalStatement: false
+SpacesInContainerLiterals: false
+SpacesInAngles: false
+SpaceBeforeParens: false
+IndentWidth: 4
+Language: Cpp
+MaxEmptyLinesToKeep: 1
+SortIncludes: false
+Standard: c++17
+Cpp11BracedListStyle: false
+TabWidth: 4
+UseTab: Never
+UseCRLF: false
+BreakStringLiterals: true
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: true
+  AfterControlStatement: true
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterObjCDeclaration: true
+  AfterStruct: true
+  AfterUnion: true
+  BeforeCatch: true
+  BeforeElse: true
+  IndentBraces: false

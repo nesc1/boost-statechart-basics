@@ -2,16 +2,18 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "2.0.0",
-    "tasks": [{
-            "label": "Configure",
+    "tasks": [
+        {
+            "label": "ConfigureDebug",
             "type": "shell",
             "command": [
                 "mkdir -p build &&",
-                "rm -rf build/CMakeFiles &&",
-                "rm -rf build/CMakeCache* &&",
                 "cd build &&",
-                "conan install .. --build outdated -s build_type=Debug -g cmake_paths --update &&",
-                "cmake .. -G \"Ninja\" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=../ -DCMAKE_PROJECT_BoostStateMachine_INCLUDE=./build/conan_paths.cmake"
+                "mkdir -p debug &&",
+                "cd debug &&",
+                "rm -rf CMakeFiles &&",
+                "rm -rf CMakeCache* &&",
+                "cmake ../.. -GNinja -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=../../install -DCMAKE_PROJECT_BoostStateMachine_INCLUDE=./conan/conan_paths.cmake"
             ],
             "problemMatcher": []
         },

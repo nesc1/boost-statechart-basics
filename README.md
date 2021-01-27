@@ -1,4 +1,4 @@
-# Project Boost State Machine Test
+# Project Boost state Machine Test
 
 ## Overview
 
@@ -15,7 +15,7 @@ The project contain the following samples:
 - `PersonWithMoney.hpp`: presents a simple example where event of get money and remove money change from one state to another;
 - `Deferral.hpp`: sample to demonstrate the deferral use;
 - `Discard.hpp`: sample to demonstrate discard usage;
-- `Hierarchy.hpp`: sample demonstrating the "hierarchy" use on  `Boost.Statechart` library
+- `hierarchy.hpp`: sample demonstrating the "hierarchy" use on  `Boost.Statechart` library
 
 ## Boost StateChart Functionality
 
@@ -24,10 +24,10 @@ Our sample use boost statechart as follow:
 - a state machine class
 
 ```cpp
-struct StateMachine : smutil::StateMachine<StateMachine, State::Idle> {
+struct StateMachine : smutil::StateMachine<StateMachine, state::Idle> {
    public:
     StateMachine()
-        : smutil::StateMachine<StateMachine, State::Idle>("StateMachine") {}
+        : smutil::StateMachine<StateMachine, state::Idle>("StateMachine") {}
 };
 ```
 
@@ -61,7 +61,7 @@ Common `Boost.Statechart` library functionality is described in detail next.
 
 The event will be unconsumed (nothing will execute) - discarded.
 
-Example of `sm.process_event(Deferral::Event::Ignore());` on state idle on `testDeferralCase()`. The event is ignored because on state `Idle` nothing is declared for event `Ignore`.
+Example of `sm.process_event(Deferral::event::Ignore());` on state idle on `testDeferralCase()`. The event is ignored because on state `Idle` nothing is declared for event `Ignore`.
 
 Unconsumed events are always tricky, we should have always some handling.
 
@@ -74,7 +74,7 @@ Can be automatic transition:
 ```cpp
     typedef mpl::list<
         ...
-        sc::transition<Event::Activate, Active>
+        sc::transition<event::Activate, Active>
         ...
         >
         reactions;
@@ -85,12 +85,12 @@ or custom reaction:
 ```cpp
     typedef mpl::list<
         ...
-        sc::custom_reaction<Event::Deactivate>,
+        sc::custom_reaction<event::Deactivate>,
         ...
         >
         reactions;
 
-    sc::result react(const Event::Deactivate &) {
+    sc::result react(const event::Deactivate &) {
         ...
         return transit<Active>();
     }
@@ -108,8 +108,8 @@ In the above example both transit from current state to the next state  `Active`
 ```cpp
     typedef mpl::list<
 
-        sc::deferral<Event::Deactivate>,
-        sc::transition<Event::Activate, Active>
+        sc::deferral<event::Deactivate>,
+        sc::transition<event::Activate, Active>
 
         >
         reactions;
@@ -119,19 +119,35 @@ Deferral state is the same as store the event for the next state to handle.
 
 Note that deferral will be saved on queue and ordered. See example of `testDeferralCase()` where event `Other` is deferral on `Idle` state then `Deactivate` is also deferral. When `Active` state is activated `Other` is deferral again and then `Deactivate` event force to move to `Idle` state again, next `Other` event is deferral once more.
 
-### Hierarchy handling
+### hierarchy handling
 
-Hierarchy handling is a good way to handle more generic events. This generic handle can be also override as you can see on example `Hierarchy.hpp`.
+hierarchy handling is a good way to handle more generic events. This generic handle can be also override as you can see on example `hierarchy.hpp`.
+
+### orthogonal states
+
+TODO
 
 ## Build
 
 To build the samples project one of the following commands can help:
 
+- using current build settings (Debug)
+
+```batch
+mkdir -p conan
+cd conan
+conan install .. -s build_type=Debug --build=outdated --update
+cd ..
+mkdir -p build
+cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_INSTALL_PREFIX=../install -DCMAKE_PROJECT_BoostStateMachine_INCLUDE=./conan/conan_paths.cmake
+cmake --build . --config Debug --target <>
+```
+
 - using Visual Studio 2017 (Release):
-   
+
 ```batch
 conan install .. --build outdated -s compiler.version=15 -s build_type=Release -g cmake_paths --update
-cmake .. -G "Visual Studio 15 2017 Win64" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../ -DCMAKE_PROJECT_BoostStateMachine_INCLUDE=./build/conan_paths.cmake
+cmake .. -G "Visual Studio 15 2017 Win64" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../ -DCMAKE_PROJECT_BoostStateMachine_INCLUDE=./conan/conan_paths.cmake
 cmake --build . --config Release --target install
 ```
 
@@ -140,7 +156,7 @@ cmake --build . --config Release --target install
 ```batch
 "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
 conan install .. --build outdated -s compiler.version=16 -s build_type=RelWithDebInfo -g cmake_paths --update
-cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=../ -DCMAKE_PROJECT_BoostStateMachine_INCLUDE=./build/conan_paths.cmake
-cmake --build . --config RelWithDebInfo --target install
+cmake ../.. -GNinja -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=../../install -DCMAKE_PROJECT_BoostStateMachine_INCLUDE=./conan/conan_paths.cmake
+cmake --build . --config Debug --target install
 ```
 

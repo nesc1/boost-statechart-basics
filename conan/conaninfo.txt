@@ -1,50 +1,47 @@
 [settings]
-    arch_build=x86_64
+    arch=x86_64
     build_type=Debug
     compiler=Visual Studio
     compiler.runtime=MDd
     compiler.version=16
-    os_build=Windows
+    os=Windows
 
 [requires]
     boost/1.Y.Z
 
 [options]
-    extra_cmake_args=
-    generator=
-    install_path=../
-    use_ninja=True
-    vs_version=150
+
 
 [full_settings]
+    arch=x86_64
     arch_build=x86_64
     build_type=Debug
     compiler=Visual Studio
     compiler.runtime=MDd
     compiler.version=16
+    os=Windows
     os_build=Windows
 
 [full_requires]
-    boost/1.72.0:bf47276734f774d697dd8719b72706277f66bfa0
+    boost/1.75.0:7291390cac111bac64a3cc81c932995d43989509
     bzip2/1.0.8:589a23dff5fdb23a7fb851223eb766480ead0a9a
+    libiconv/1.16:d057732059ea44a47760900cb5e4855d2bea8714
     zlib/1.2.11:d057732059ea44a47760900cb5e4855d2bea8714
 
 [full_options]
-    extra_cmake_args=
-    generator=
-    install_path=../
-    use_ninja=True
-    vs_version=150
     boost:asio_no_deprecated=False
     boost:bzip2=True
-    boost:debug_level=2
+    boost:debug_level=0
+    boost:diagnostic_definitions=False
     boost:error_code_header_only=False
     boost:extra_b2_flags=None
     boost:filesystem_no_deprecated=False
     boost:header_only=False
+    boost:i18n_backend=iconv
     boost:layout=system
     boost:lzma=False
     boost:magic_autolink=False
+    boost:multithreading=True
     boost:namespace=boost
     boost:namespace_alias=False
     boost:pch=True
@@ -64,12 +61,14 @@
     boost:without_fiber=False
     boost:without_filesystem=False
     boost:without_graph=False
-    boost:without_graph_parallel=False
+    boost:without_graph_parallel=True
     boost:without_iostreams=False
+    boost:without_json=False
     boost:without_locale=False
     boost:without_log=False
     boost:without_math=False
-    boost:without_mpi=False
+    boost:without_mpi=True
+    boost:without_nowide=False
     boost:without_program_options=False
     boost:without_python=True
     boost:without_random=False
@@ -86,6 +85,7 @@
     boost:zstd=False
     bzip2:build_executable=True
     bzip2:shared=False
+    libiconv:shared=False
     zlib:minizip=False
     zlib:shared=False
 
