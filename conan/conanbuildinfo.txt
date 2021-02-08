@@ -1,78 +1,80 @@
 [includedirs]
-C:/.conan/603b53/1/include
-C:/Users/Nuno/.conan/data/zlib/1.2.11/_/_/package/d057732059ea44a47760900cb5e4855d2bea8714/include
-C:/Users/Nuno/.conan/data/bzip2/1.0.8/_/_/package/589a23dff5fdb23a7fb851223eb766480ead0a9a/include
-C:/Users/Nuno/.conan/data/libiconv/1.16/_/_/package/d057732059ea44a47760900cb5e4855d2bea8714/include
+/home/nuno/.conan/data/boost/1.75.0/_/_/package/57e80901bc8c047b5a4628a8cd377172c16fbc84/include
+/home/nuno/.conan/data/zlib/1.2.11/_/_/package/23b828d52c0630e6b0b96d2945419feb7843c4f8/include
+/home/nuno/.conan/data/bzip2/1.0.8/_/_/package/1d984b241c5c01f748cafe0b37dc9567ed236fef/include
+/home/nuno/.conan/data/libiconv/1.16/_/_/package/23b828d52c0630e6b0b96d2945419feb7843c4f8/include
 
 [libdirs]
-C:/.conan/603b53/1/lib
-C:/Users/Nuno/.conan/data/zlib/1.2.11/_/_/package/d057732059ea44a47760900cb5e4855d2bea8714/lib
-C:/Users/Nuno/.conan/data/bzip2/1.0.8/_/_/package/589a23dff5fdb23a7fb851223eb766480ead0a9a/lib
-C:/Users/Nuno/.conan/data/libiconv/1.16/_/_/package/d057732059ea44a47760900cb5e4855d2bea8714/lib
+/home/nuno/.conan/data/boost/1.75.0/_/_/package/57e80901bc8c047b5a4628a8cd377172c16fbc84/lib
+/home/nuno/.conan/data/zlib/1.2.11/_/_/package/23b828d52c0630e6b0b96d2945419feb7843c4f8/lib
+/home/nuno/.conan/data/bzip2/1.0.8/_/_/package/1d984b241c5c01f748cafe0b37dc9567ed236fef/lib
+/home/nuno/.conan/data/libiconv/1.16/_/_/package/23b828d52c0630e6b0b96d2945419feb7843c4f8/lib
 
 [bindirs]
-C:/Users/Nuno/.conan/data/bzip2/1.0.8/_/_/package/589a23dff5fdb23a7fb851223eb766480ead0a9a/bin
-C:/Users/Nuno/.conan/data/libiconv/1.16/_/_/package/d057732059ea44a47760900cb5e4855d2bea8714/bin
+/home/nuno/.conan/data/bzip2/1.0.8/_/_/package/1d984b241c5c01f748cafe0b37dc9567ed236fef/bin
+/home/nuno/.conan/data/libiconv/1.16/_/_/package/23b828d52c0630e6b0b96d2945419feb7843c4f8/bin
 
 [resdirs]
 
 
 [builddirs]
-C:/.conan/603b53/1/
-C:/Users/Nuno/.conan/data/zlib/1.2.11/_/_/package/d057732059ea44a47760900cb5e4855d2bea8714/
-C:/Users/Nuno/.conan/data/bzip2/1.0.8/_/_/package/589a23dff5fdb23a7fb851223eb766480ead0a9a/
-C:/Users/Nuno/.conan/data/libiconv/1.16/_/_/package/d057732059ea44a47760900cb5e4855d2bea8714/
+/home/nuno/.conan/data/boost/1.75.0/_/_/package/57e80901bc8c047b5a4628a8cd377172c16fbc84/
+/home/nuno/.conan/data/zlib/1.2.11/_/_/package/23b828d52c0630e6b0b96d2945419feb7843c4f8/
+/home/nuno/.conan/data/bzip2/1.0.8/_/_/package/1d984b241c5c01f748cafe0b37dc9567ed236fef/
+/home/nuno/.conan/data/libiconv/1.16/_/_/package/23b828d52c0630e6b0b96d2945419feb7843c4f8/
 
 [libs]
-libboost_contract
-libboost_coroutine
-libboost_fiber
-libboost_context
-libboost_graph
-libboost_iostreams
-libboost_json
-libboost_log_setup
-libboost_log
-libboost_locale
-libboost_math_c99
-libboost_math_c99f
-libboost_math_c99l
-libboost_math_tr1
-libboost_math_tr1f
-libboost_math_tr1l
-libboost_nowide
-libboost_program_options
-libboost_random
-libboost_regex
-libboost_stacktrace_noop
-libboost_stacktrace_windbg
-libboost_stacktrace_windbg_cached
-libboost_timer
-libboost_type_erasure
-libboost_thread
-libboost_atomic
-libboost_chrono
-libboost_container
-libboost_date_time
-libboost_unit_test_framework
-libboost_prg_exec_monitor
-libboost_test_exec_monitor
-libboost_exception
-libboost_wave
-libboost_filesystem
-libboost_system
-libboost_wserialization
-libboost_serialization
-zlib
+boost_contract
+boost_coroutine
+boost_fiber
+boost_context
+boost_graph
+boost_iostreams
+boost_json
+boost_log_setup
+boost_log
+boost_locale
+boost_math_c99
+boost_math_c99f
+boost_math_c99l
+boost_math_tr1
+boost_math_tr1f
+boost_math_tr1l
+boost_nowide
+boost_program_options
+boost_random
+boost_regex
+boost_stacktrace_addr2line
+boost_stacktrace_backtrace
+boost_stacktrace_basic
+boost_stacktrace_noop
+boost_timer
+boost_type_erasure
+boost_thread
+boost_atomic
+boost_chrono
+boost_container
+boost_date_time
+boost_unit_test_framework
+boost_prg_exec_monitor
+boost_test_exec_monitor
+boost_exception
+boost_wave
+boost_filesystem
+boost_system
+boost_wserialization
+boost_serialization
+z
 bz2
 iconv
 charset
 
 [system_libs]
-bcrypt
+rt
+pthread
 
 [defines]
-BOOST_ALL_NO_LIB
+
 
 [cppflags]
 
@@ -100,10 +102,10 @@ BOOST_ALL_NO_LIB
 
 
 [includedirs_boost]
-C:/.conan/603b53/1/include
+/home/nuno/.conan/data/boost/1.75.0/_/_/package/57e80901bc8c047b5a4628a8cd377172c16fbc84/include
 
 [libdirs_boost]
-C:/.conan/603b53/1/lib
+/home/nuno/.conan/data/boost/1.75.0/_/_/package/57e80901bc8c047b5a4628a8cd377172c16fbc84/lib
 
 [bindirs_boost]
 
@@ -112,54 +114,56 @@ C:/.conan/603b53/1/lib
 
 
 [builddirs_boost]
-C:/.conan/603b53/1/
+/home/nuno/.conan/data/boost/1.75.0/_/_/package/57e80901bc8c047b5a4628a8cd377172c16fbc84/
 
 [libs_boost]
-libboost_contract
-libboost_coroutine
-libboost_fiber
-libboost_context
-libboost_graph
-libboost_iostreams
-libboost_json
-libboost_log_setup
-libboost_log
-libboost_locale
-libboost_math_c99
-libboost_math_c99f
-libboost_math_c99l
-libboost_math_tr1
-libboost_math_tr1f
-libboost_math_tr1l
-libboost_nowide
-libboost_program_options
-libboost_random
-libboost_regex
-libboost_stacktrace_noop
-libboost_stacktrace_windbg
-libboost_stacktrace_windbg_cached
-libboost_timer
-libboost_type_erasure
-libboost_thread
-libboost_atomic
-libboost_chrono
-libboost_container
-libboost_date_time
-libboost_unit_test_framework
-libboost_prg_exec_monitor
-libboost_test_exec_monitor
-libboost_exception
-libboost_wave
-libboost_filesystem
-libboost_system
-libboost_wserialization
-libboost_serialization
+boost_contract
+boost_coroutine
+boost_fiber
+boost_context
+boost_graph
+boost_iostreams
+boost_json
+boost_log_setup
+boost_log
+boost_locale
+boost_math_c99
+boost_math_c99f
+boost_math_c99l
+boost_math_tr1
+boost_math_tr1f
+boost_math_tr1l
+boost_nowide
+boost_program_options
+boost_random
+boost_regex
+boost_stacktrace_addr2line
+boost_stacktrace_backtrace
+boost_stacktrace_basic
+boost_stacktrace_noop
+boost_timer
+boost_type_erasure
+boost_thread
+boost_atomic
+boost_chrono
+boost_container
+boost_date_time
+boost_unit_test_framework
+boost_prg_exec_monitor
+boost_test_exec_monitor
+boost_exception
+boost_wave
+boost_filesystem
+boost_system
+boost_wserialization
+boost_serialization
 
 [system_libs_boost]
-bcrypt
+rt
+pthread
 
 [defines_boost]
-BOOST_ALL_NO_LIB
+
 
 [cppflags_boost]
 
@@ -186,7 +190,7 @@ BOOST_ALL_NO_LIB
 
 
 [rootpath_boost]
-C:/.conan/603b53/1
+/home/nuno/.conan/data/boost/1.75.0/_/_/package/57e80901bc8c047b5a4628a8cd377172c16fbc84
 
 [name_boost]
 boost
@@ -204,10 +208,10 @@ cmake_find_package_multi=Boost
 
 
 [includedirs_zlib]
-C:/Users/Nuno/.conan/data/zlib/1.2.11/_/_/package/d057732059ea44a47760900cb5e4855d2bea8714/include
+/home/nuno/.conan/data/zlib/1.2.11/_/_/package/23b828d52c0630e6b0b96d2945419feb7843c4f8/include
 
 [libdirs_zlib]
-C:/Users/Nuno/.conan/data/zlib/1.2.11/_/_/package/d057732059ea44a47760900cb5e4855d2bea8714/lib
+/home/nuno/.conan/data/zlib/1.2.11/_/_/package/23b828d52c0630e6b0b96d2945419feb7843c4f8/lib
 
 [bindirs_zlib]
 
@@ -216,10 +220,10 @@ C:/Users/Nuno/.conan/data/zlib/1.2.11/_/_/package/d057732059ea44a47760900cb5e485
 
 
 [builddirs_zlib]
-C:/Users/Nuno/.conan/data/zlib/1.2.11/_/_/package/d057732059ea44a47760900cb5e4855d2bea8714/
+/home/nuno/.conan/data/zlib/1.2.11/_/_/package/23b828d52c0630e6b0b96d2945419feb7843c4f8/
 
 [libs_zlib]
-zlib
+z
 
 [system_libs_zlib]
 
@@ -252,7 +256,7 @@ zlib
 
 
 [rootpath_zlib]
-C:/Users/Nuno/.conan/data/zlib/1.2.11/_/_/package/d057732059ea44a47760900cb5e4855d2bea8714
+/home/nuno/.conan/data/zlib/1.2.11/_/_/package/23b828d52c0630e6b0b96d2945419feb7843c4f8
 
 [name_zlib]
 zlib
@@ -269,19 +273,19 @@ cmake_find_package_multi=ZLIB
 
 
 [includedirs_bzip2]
-C:/Users/Nuno/.conan/data/bzip2/1.0.8/_/_/package/589a23dff5fdb23a7fb851223eb766480ead0a9a/include
+/home/nuno/.conan/data/bzip2/1.0.8/_/_/package/1d984b241c5c01f748cafe0b37dc9567ed236fef/include
 
 [libdirs_bzip2]
-C:/Users/Nuno/.conan/data/bzip2/1.0.8/_/_/package/589a23dff5fdb23a7fb851223eb766480ead0a9a/lib
+/home/nuno/.conan/data/bzip2/1.0.8/_/_/package/1d984b241c5c01f748cafe0b37dc9567ed236fef/lib
 
 [bindirs_bzip2]
-C:/Users/Nuno/.conan/data/bzip2/1.0.8/_/_/package/589a23dff5fdb23a7fb851223eb766480ead0a9a/bin
+/home/nuno/.conan/data/bzip2/1.0.8/_/_/package/1d984b241c5c01f748cafe0b37dc9567ed236fef/bin
 
 [resdirs_bzip2]
 
 
 [builddirs_bzip2]
-C:/Users/Nuno/.conan/data/bzip2/1.0.8/_/_/package/589a23dff5fdb23a7fb851223eb766480ead0a9a/
+/home/nuno/.conan/data/bzip2/1.0.8/_/_/package/1d984b241c5c01f748cafe0b37dc9567ed236fef/
 
 [libs_bzip2]
 bz2
@@ -317,7 +321,7 @@ bz2
 
 
 [rootpath_bzip2]
-C:/Users/Nuno/.conan/data/bzip2/1.0.8/_/_/package/589a23dff5fdb23a7fb851223eb766480ead0a9a
+/home/nuno/.conan/data/bzip2/1.0.8/_/_/package/1d984b241c5c01f748cafe0b37dc9567ed236fef
 
 [name_bzip2]
 bzip2
@@ -334,19 +338,19 @@ cmake_find_package_multi=BZip2
 
 
 [includedirs_libiconv]
-C:/Users/Nuno/.conan/data/libiconv/1.16/_/_/package/d057732059ea44a47760900cb5e4855d2bea8714/include
+/home/nuno/.conan/data/libiconv/1.16/_/_/package/23b828d52c0630e6b0b96d2945419feb7843c4f8/include
 
 [libdirs_libiconv]
-C:/Users/Nuno/.conan/data/libiconv/1.16/_/_/package/d057732059ea44a47760900cb5e4855d2bea8714/lib
+/home/nuno/.conan/data/libiconv/1.16/_/_/package/23b828d52c0630e6b0b96d2945419feb7843c4f8/lib
 
 [bindirs_libiconv]
-C:/Users/Nuno/.conan/data/libiconv/1.16/_/_/package/d057732059ea44a47760900cb5e4855d2bea8714/bin
+/home/nuno/.conan/data/libiconv/1.16/_/_/package/23b828d52c0630e6b0b96d2945419feb7843c4f8/bin
 
 [resdirs_libiconv]
 
 
 [builddirs_libiconv]
-C:/Users/Nuno/.conan/data/libiconv/1.16/_/_/package/d057732059ea44a47760900cb5e4855d2bea8714/
+/home/nuno/.conan/data/libiconv/1.16/_/_/package/23b828d52c0630e6b0b96d2945419feb7843c4f8/
 
 [libs_libiconv]
 iconv
@@ -383,7 +387,7 @@ charset
 
 
 [rootpath_libiconv]
-C:/Users/Nuno/.conan/data/libiconv/1.16/_/_/package/d057732059ea44a47760900cb5e4855d2bea8714
+/home/nuno/.conan/data/libiconv/1.16/_/_/package/23b828d52c0630e6b0b96d2945419feb7843c4f8
 
 [name_libiconv]
 libiconv
@@ -404,8 +408,8 @@ cmake_find_package_multi=Iconv
 [USER_libiconv]
 [USER_zlib]
 [ENV_boost]
-BOOST_ROOT=C:\.conan\603b53\1
+BOOST_ROOT=/home/nuno/.conan/data/boost/1.75.0/_/_/package/57e80901bc8c047b5a4628a8cd377172c16fbc84
 [ENV_zlib]
 [ENV_bzip2]
 [ENV_libiconv]
-PATH=["C:\Users\Nuno\.conan\data\libiconv\1.16\_\_\package\d057732059ea44a47760900cb5e4855d2bea8714\bin"]
+PATH=["/home/nuno/.conan/data/libiconv/1.16/_/_/package/23b828d52c0630e6b0b96d2945419feb7843c4f8/bin"]

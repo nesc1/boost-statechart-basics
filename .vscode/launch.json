@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "inputs": [
         {
-            "id": "SaveBot",
+            "id": "BoostSimpleExample",
             "type": "pickString",
             "description": "Choose the gtest filters:",
             "options": [
@@ -13,20 +13,74 @@
             ]
         },
         {
-            "id": "utilstest",
+            "id": "Deferral",
             "type": "pickString",
             "description": "Choose the gtest filters:",
             "options": [
-                "*ConnectToSFTP"
+                "*"
+            ]
+        },
+        {
+            "id": "Discard",
+            "type": "pickString",
+            "description": "Choose the gtest filters:",
+            "options": [
+                "*"
+            ]
+        },
+        {
+            "id": "Hierarchy",
+            "type": "pickString",
+            "description": "Choose the gtest filters:",
+            "options": [
+                "*"
+            ]
+        },
+        {
+            "id": "PersonWithMoney",
+            "type": "pickString",
+            "description": "Choose the gtest filters:",
+            "options": [
+                "*"
+            ]
+        },
+        {
+            "id": "CommandQueue",
+            "type": "pickString",
+            "description": "Choose the gtest filters:",
+            "options": [
+                "*"
             ]
         }
     ],
     "configurations": [
         {
-            "name": "(Win) PersonWithMoney",
+            "name": "(Win) BoostSimpleExample",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/debug/src/PersonWithMoney/PersonWithMoney.exe",
+            "program": "${workspaceFolder}/build/debug/src/BoostSimpleExample/BoostSimpleExample.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true
+        },
+        {
+            "name": "(Win) Deferral",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/debug/src/Deferral/Deferral.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true
+        },
+        {
+            "name": "(Win) Discard",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/debug/src/Discard/Discard.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -45,6 +99,17 @@
             "externalConsole": true
         },
         {
+            "name": "(Win) PersonWithMoney",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/debug/src/PersonWithMoney/PersonWithMoney.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true
+        },
+        {
             "name": "(Win) CommandQueue",
             "type": "cppvsdbg",
             "request": "launch",
@@ -56,13 +121,148 @@
             "externalConsole": true
         },
         {
-            "name": "(Linux) CommandQueue)",
+            "name": "(Linux) BoostSimpleExample",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/debug/bin/SaveBot",
+            "program": "${workspaceFolder}/build/debug/src/BoostSimpleExample/BoostSimpleExample",
             "args": [
                 "--gmock_verbose=warning",
-                "--gtest_filter='${input:SaveBot}'",
+                "--gtest_filter='${input:BoostSimpleExample}'",
+                "--stderr"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerArgs": "-x ${workspaceFolder}/build/.gdbinit",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "targetArchitecture": "x64",
+            "linux": {
+                "miDebuggerPath": "/usr/bin/gdb"
+            }
+        },
+        {
+            "name": "(Linux) Deferral",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/debug/src/Deferral/Deferral",
+            "args": [
+                "--gmock_verbose=warning",
+                "--gtest_filter='${input:Deferral}'",
+                "--stderr"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerArgs": "-x ${workspaceFolder}/build/.gdbinit",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "targetArchitecture": "x64",
+            "linux": {
+                "miDebuggerPath": "/usr/bin/gdb"
+            }
+        },
+        {
+            "name": "(Linux) Discard",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/debug/src/Discard/Discard",
+            "args": [
+                "--gmock_verbose=warning",
+                "--gtest_filter='${input:Discard}'",
+                "--stderr"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerArgs": "-x ${workspaceFolder}/build/.gdbinit",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "targetArchitecture": "x64",
+            "linux": {
+                "miDebuggerPath": "/usr/bin/gdb"
+            }
+        },
+        {
+            "name": "(Linux) Hierarchy",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/debug/src/Hierarchy/Hierarchy",
+            "args": [
+                "--gmock_verbose=warning",
+                "--gtest_filter='${input:Hierarchy}'",
+                "--stderr"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerArgs": "-x ${workspaceFolder}/build/.gdbinit",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "targetArchitecture": "x64",
+            "linux": {
+                "miDebuggerPath": "/usr/bin/gdb"
+            }
+        },
+        {
+            "name": "(Linux) PersonWithMoney",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/debug/src/PersonWithMoney/PersonWithMoney",
+            "args": [
+                "--gmock_verbose=warning",
+                "--gtest_filter='${input:PersonWithMoney}'",
+                "--stderr"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerArgs": "-x ${workspaceFolder}/build/.gdbinit",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "targetArchitecture": "x64",
+            "linux": {
+                "miDebuggerPath": "/usr/bin/gdb"
+            }
+        },
+        {
+            "name": "(Linux) CommandQueue",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/debug/src/CommandQueue/CommandQueue",
+            "args": [
+                "--gmock_verbose=warning",
+                "--gtest_filter='${input:CommandQueue}'",
                 "--stderr"
             ],
             "stopAtEntry": false,

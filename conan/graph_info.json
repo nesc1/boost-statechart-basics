@@ -25,6 +25,10 @@
    "None"
   ],
   [
+   "boost:fPIC",
+   "True"
+  ],
+  [
    "boost:filesystem_no_deprecated",
    "False"
   ],
@@ -221,12 +225,24 @@
    "True"
   ],
   [
+   "bzip2:fPIC",
+   "True"
+  ],
+  [
    "bzip2:shared",
    "False"
   ],
   [
+   "libiconv:fPIC",
+   "True"
+  ],
+  [
    "libiconv:shared",
    "False"
+  ],
+  [
+   "zlib:fPIC",
+   "True"
   ],
   [
    "zlib:minizip",

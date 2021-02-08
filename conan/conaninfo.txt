@@ -1,10 +1,10 @@
 [settings]
     arch=x86_64
     build_type=Debug
-    compiler=Visual Studio
-    compiler.runtime=MDd
-    compiler.version=16
-    os=Windows
+    compiler=gcc
+    compiler.libcxx=libstdc++11
+    compiler.version=9
+    os=Linux
 
 [requires]
     boost/1.Y.Z
@@ -16,17 +16,17 @@
     arch=x86_64
     arch_build=x86_64
     build_type=Debug
-    compiler=Visual Studio
-    compiler.runtime=MDd
-    compiler.version=16
-    os=Windows
-    os_build=Windows
+    compiler=gcc
+    compiler.libcxx=libstdc++11
+    compiler.version=9
+    os=Linux
+    os_build=Linux
 
 [full_requires]
-    boost/1.75.0:7291390cac111bac64a3cc81c932995d43989509
-    bzip2/1.0.8:589a23dff5fdb23a7fb851223eb766480ead0a9a
-    libiconv/1.16:d057732059ea44a47760900cb5e4855d2bea8714
-    zlib/1.2.11:d057732059ea44a47760900cb5e4855d2bea8714
+    boost/1.75.0:57e80901bc8c047b5a4628a8cd377172c16fbc84
+    bzip2/1.0.8:1d984b241c5c01f748cafe0b37dc9567ed236fef
+    libiconv/1.16:23b828d52c0630e6b0b96d2945419feb7843c4f8
+    zlib/1.2.11:23b828d52c0630e6b0b96d2945419feb7843c4f8
 
 [full_options]
     boost:asio_no_deprecated=False
@@ -35,6 +35,7 @@
     boost:diagnostic_definitions=False
     boost:error_code_header_only=False
     boost:extra_b2_flags=None
+    boost:fPIC=True
     boost:filesystem_no_deprecated=False
     boost:header_only=False
     boost:i18n_backend=iconv
@@ -84,8 +85,11 @@
     boost:zlib=True
     boost:zstd=False
     bzip2:build_executable=True
+    bzip2:fPIC=True
     bzip2:shared=False
+    libiconv:fPIC=True
     libiconv:shared=False
+    zlib:fPIC=True
     zlib:minizip=False
     zlib:shared=False
 
@@ -93,4 +97,4 @@
 
 
 [env]
-    CONAN_CMAKE_GENERATOR=Ninja
+

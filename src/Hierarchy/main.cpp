@@ -1,7 +1,7 @@
 #include <iostream>
 #include <typeinfo>
 
-#include "hierarchy.hpp"
+#include "Hierarchy.hpp"
 
 using namespace std;
 
@@ -55,7 +55,8 @@ using namespace std;
 [STM] [hierarchy] < hierarchy::state::Stopped
 end
  */
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
     hierarchy::StateMachine sm;
 
     cout << ">init\n";

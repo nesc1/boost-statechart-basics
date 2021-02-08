@@ -2,25 +2,54 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "2.0.0",
+    "inputs": [
+        {
+            "id": "pickTarget",
+            "type": "pickString",
+            "description": "Choose the target to build:",
+            "options": [
+                "all",
+                "BoostSimpleExample",
+                "Deferral",
+                "Discard",
+                "Hierarchy",
+                "PersonWithMoney",
+                "CommandQueue"
+            ]
+        },
+        {
+            "id": "pickBuildType",
+            "type": "pickString",
+            "description": "Choose the build type:",
+            "options": [
+                "debug",
+                "release"
+            ]
+        }
+    ],
     "tasks": [
         {
             "label": "ConfigureDebug",
             "type": "shell",
             "command": [
+                "mkdir -p conan &&",
+                "cd conan &&",
+                "conan install .. -s build_type=Debug --build=outdated --update &&",
+                "cd .. &&",
                 "mkdir -p build &&",
                 "cd build &&",
                 "mkdir -p debug &&",
                 "cd debug &&",
                 "rm -rf CMakeFiles &&",
-                "rm -rf CMakeCache* &&",
-                "cmake ../.. -GNinja -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=../../install -DCMAKE_PROJECT_BoostStateMachine_INCLUDE=./conan/conan_paths.cmake"
+                "rm -rf \"CMakeCache*\" &&",
+                "cmake ../.. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=../../install -DCMAKE_PROJECT_BoostStateMachine_INCLUDE=./conan/conan_paths.cmake"
             ],
             "problemMatcher": []
         },
         {
             "label": "Build",
             "type": "shell",
-            "command": "cmake --build . --config Debug",
+            "command": "time cmake --build build/${input:pickBuildType} --target ${input:pickTarget} -- -j2",
             "group": {
                 "kind": "build",
                 "isDefault": true
